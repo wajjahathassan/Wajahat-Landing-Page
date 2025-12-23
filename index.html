@@ -78,36 +78,21 @@
     </header>
 
     <section>
-      <h2>Quick demo (45-60s)</h2>
-      <div style="display: flex; gap: 16px; align-items: flex-start">
-        <div>
-          <!-- If you add demo.gif to same folder, it will show -->
-          <img
-            src="demo.mp4"
-            alt="demo"
-            style="
-              width: 360px;
-              height: 200px;
-              object-fit: cover;
-              border-radius: 6px;
-            "
-            onerror="this.style.display='none'"
-          />
-          <div class="demo-placeholder" id="demobox" style="display: none">
-            Drop demo.mp4 here
-          </div>
-        </div>
-        <div style="flex: 1">
-          <p>
-            I built a retrieval-augmented Q&A prototype that demonstrates
-            embeddings → FAISS retrieval → prompt → Google Gemini generation,
-            integrated into a Flask endpoint and a chat UI. The repo contains
-            README and run instructions.
-          </p>
-          <p>
-            If you prefer a short walkthrough, I can send a 45-60s MP4 or GIF on
-            request.
-          </p>
+      <h2>Quick demo (30–60s)</h2>
+      <div style="display:flex; gap:16px; align-items:flex-start; flex-wrap: wrap;">
+        <video
+          width="360"
+          height="200"
+          controls
+          style="border-radius:6px; background:#000;"
+        >
+          <source src="demo.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        <div style="flex:1; min-width:240px;">
+          <p>This video shows a short walkthrough of my retrieval-augmented Q&A prototype — embeddings → FAISS → Google Gemini, all running inside a Flask demo. The GitHub contains full source and README with run instructions.</p>
+          <p>If you'd like an alternate format or a longer walkthrough, I can share a hosted video link on request.</p>
         </div>
       </div>
     </section>
@@ -118,20 +103,21 @@
         <strong>The Shrine</strong> | RAG-enabled Flask app (embeddings, FAISS,
         Gemini). Repo & demo:
         <a href="https://github.com/wajjahathassan/The-Shrine"
-          >github.com/wajjahathassan/The-Shrine</a
+          >The Shrine</a
         >.
       </div>
       <div class="project">
         <strong>Portfolio Gallery</strong> | Flask + pandas driven gallery,
-        CSV-backed content and an estimator widget.
+        CSV-backed content and an estimator widget. Rep & demo:
+        <a href="https://github.com/wajjahathassan/Portfolio-Gallery">Portfolio Gallery</a>
       </div>
     </section>
 
     <footer>
       <p>
-        Contact: wajahat.hassan.2106@gmail.com · GitHub:
+        <strong>Contact:</strong> wajahat.hassan.2106@gmail.com · <strong>GitHub:</strong>
         <a href="https://github.com/wajjahathassan"
-          >github.com/wajjahathassan</a
+          >https://github.com/wajjahathassan</a
         >
       </p>
     </footer>
