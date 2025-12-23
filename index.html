@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Wajahat Hassan - Portfolio</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 900px;
+        margin: 40px auto;
+        line-height: 1.5;
+        color: #222;
+      }
+      header {
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 12px;
+        margin-bottom: 18px;
+      }
+      a.button {
+        display: inline-block;
+        background: #0366d6;
+        color: white;
+        padding: 8px 12px;
+        border-radius: 6px;
+        text-decoration: none;
+        margin-right: 8px;
+      }
+      .meta {
+        color: #555;
+        font-size: 90%;
+      }
+      .demo-placeholder {
+        width: 360px;
+        height: 200px;
+        background: #eee;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #888;
+        border-radius: 6px;
+      }
+      .project {
+        margin: 12px 0;
+      }
+      footer {
+        margin-top: 28px;
+        border-top: 1px solid #eee;
+        padding-top: 12px;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Wajahat Hassan</h1>
+      <p class="meta">
+        Python / Flask developer - deployable RAG prototypes & web backends.
+        Seeking MS/RA or junior backend roles (Asan / nearby cities preferred).
+      </p>
+      <p>
+        <a class="button" href="CV_Wajahat_Hassan.pdf" target="_blank"
+          >Download CV (PDF)</a
+        >
+        <a
+          class="button"
+          href="https://github.com/wajjahathassan"
+          target="_blank"
+          >GitHub</a
+        >
+        <a
+          class="button"
+          href="https://wajahat2106hassan.pythonanywhere.com"
+          target="_blank"
+          >Live demo</a
+        >
+      </p>
+    </header>
+
+    <section>
+      <h2>Quick demo (45-60s)</h2>
+      <div style="display: flex; gap: 16px; align-items: flex-start">
+        <div>
+          <!-- If you add demo.gif to same folder, it will show -->
+          <img
+            src="demo.mp4"
+            alt="demo"
+            style="
+              width: 360px;
+              height: 200px;
+              object-fit: cover;
+              border-radius: 6px;
+            "
+            onerror="this.style.display='none'"
+          />
+          <div class="demo-placeholder" id="demobox" style="display: none">
+            Drop demo.mp4 here
+          </div>
+        </div>
+        <div style="flex: 1">
+          <p>
+            I built a retrieval-augmented Q&A prototype that demonstrates
+            embeddings → FAISS retrieval → prompt → Google Gemini generation,
+            integrated into a Flask endpoint and a chat UI. The repo contains
+            README and run instructions.
+          </p>
+          <p>
+            If you prefer a short walkthrough, I can send a 45-60s MP4 or GIF on
+            request.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Selected projects</h2>
+      <div class="project">
+        <strong>The Shrine</strong> | RAG-enabled Flask app (embeddings, FAISS,
+        Gemini). Repo & demo:
+        <a href="https://github.com/wajjahathassan/The-Shrine"
+          >github.com/wajjahathassan/The-Shrine</a
+        >.
+      </div>
+      <div class="project">
+        <strong>Portfolio Gallery</strong> | Flask + pandas driven gallery,
+        CSV-backed content and an estimator widget.
+      </div>
+    </section>
+
+    <footer>
+      <p>
+        Contact: wajahat.hassan.2106@gmail.com · GitHub:
+        <a href="https://github.com/wajjahathassan"
+          >github.com/wajjahathassan</a
+        >
+      </p>
+    </footer>
+
+    <script>
+      // show placeholder if demo.mp4 missing
+      window.addEventListener("DOMContentLoaded", function () {
+        var imgs = document.querySelectorAll("img");
+        var shown = false;
+        imgs.forEach(function (i) {
+          if (i.complete && i.naturalWidth > 0) shown = true;
+        });
+        if (!shown) {
+          document.getElementById("demobox").style.display = "flex";
+        }
+      });
+    </script>
+  </body>
+</html>
