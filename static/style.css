@@ -1,0 +1,251 @@
+:root {
+    --bg-color: #FAFAF5;
+    --card-bg: #FFFFFF;
+    --text-primary: #2C2C2C;
+    --text-secondary: #5D4037;
+
+    --accent-bronze: #A0522D;
+    --accent-glow: #E6D2B5;
+
+    --font-heading: 'Crimson Text', serif;
+    --font-body: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    text-align: center;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    color: var(--text-secondary);
+}
+
+/* CTA Button Styling */
+.cta-button {
+    display: inline-block;          /* Makes the link behave like a button box */
+    background-color: var(--accent-bronze);
+    color: #FFFFFF;                 /* White text for contrast */
+    text-decoration: none;          /* Removes the underline */
+    padding: 12px 30px;             /* Top/Bottom and Left/Right padding */
+    border-radius: 5px;             /* Slight rounding for a modern look */
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+/* Hover State - Visual Feedback */
+.cta-button:hover {
+    background-color: var(--text-secondary); /* Darker brown on hover */
+    transform: translateY(-2px);    /* subtle lift effect */
+}
+
+/* The Grid Layout */
+.project-section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.project-grid {
+    display: grid;
+    /* This creates a responsive layout */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* The Component Card */
+.project-card {
+    background-color: var(--card-bg);
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column; /* Stacks content vertically */
+    justify-content: space-between;
+}
+
+.card-header h3 {
+    margin-top: 0;
+    font-size: 1.4rem;
+    color: var(--text-secondary);
+    border-bottom: 2px solid var(--accent-glow);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+/* Technical Tags */
+.tech-stack {
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tech-tag {
+    background-color: var(--bg-color);
+    color: var(--text-secondary);
+    border: 1px solid var(--accent-bronze);
+    padding: 4px 10px;
+    font-size: 0.85rem;
+    font-family: var(--font-body);
+    border-radius: 4px;
+}
+
+/* Timeline Container */
+.timeline-section {
+    padding: 60px 20px;
+    background-color: #F0F0EB; /* Slightly darker color than body for contrast */
+    border-top: 1px solid #e0e0e0;
+}
+
+.steps-container {
+    display: flex;
+    flex-direction: row; /* Horizontal Flow on Desktop */
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 40px auto 0;
+    gap: 20px;
+}
+
+/* The Individual Step */
+.step-card {
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid #dcdcdc;
+    flex: 1; /* Each card takes equal width */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    position: relative;
+}
+
+.step-icon {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    background: var(--bg-color);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid var(--accent-bronze);
+    color: var(--text-secondary);
+}
+
+.step-card h3 {
+    color: var(--accent-bronze);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.step-card h4 {
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: var(--text-primary);
+}
+
+/* The Connector Arrow (Geometrically Drawn Through CSS) */
+.step-connector {
+    width: 0;
+    height: 0;
+    
+    /* The Geometry */
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 15px solid var(--accent-bronze); /* Points Right */
+    
+    /* Positioning */
+    align-self: center;
+    margin: 0 10px; /* Gives it breathing room */
+    
+    /* Remove old font styling */
+    font-size: 0; 
+    padding: 0;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+    .steps-container {
+        flex-direction: column; /* Stacks vertically on mobile */
+    }
+
+    .step-connector {
+        transform: rotate(90deg); /* Turns arrow to point DOWN */
+        margin: 10px 0;
+    }
+    
+    .step-card {
+        width: 100%; /* Full width on mobile */
+    }
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 80px 20px;
+    text-align: center; /* Center aligns everything */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-text {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: var(--text-secondary);
+}
+
+.contact-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap; /* Wraps buttons on small screens */
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: var(--accent-bronze);
+    color: white;
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    border: 1px solid var(--accent-bronze);
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #8B4513; /* Darker bronze on hover */
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--text-secondary);
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 4px;
+    border: 1px solid var(--text-secondary);
+    transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: var(--text-secondary);
+    color: white;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: #888;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 40px;
+}

@@ -1,138 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="static/style.css" />
     <title>Wajahat Hassan - Portfolio</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        max-width: 900px;
-        margin: 40px auto;
-        line-height: 1.5;
-        color: #222;
-      }
-      header {
-        border-bottom: 1px solid #ddd;
-        padding-bottom: 12px;
-        margin-bottom: 18px;
-      }
-      a.button {
-        display: inline-block;
-        background: #0366d6;
-        color: white;
-        padding: 8px 12px;
-        border-radius: 6px;
-        text-decoration: none;
-        margin-right: 8px;
-      }
-      .meta {
-        color: #555;
-        font-size: 90%;
-      }
-      .demo-placeholder {
-        width: 360px;
-        height: 200px;
-        background: #eee;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #888;
-        border-radius: 6px;
-      }
-      .project {
-        margin: 12px 0;
-      }
-      footer {
-        margin-top: 28px;
-        border-top: 1px solid #eee;
-        padding-top: 12px;
-        color: #666;
-      }
-    </style>
   </head>
+
   <body>
-    <header>
-      <h1>Wajahat Hassan</h1>
-      <p class="meta">
-        Python / Flask developer - deployable RAG prototypes & web backends.
-        Seeking MS/RA or junior backend roles (Asan / nearby cities preferred).
-      </p>
-      <p>
-        <a class="button" href="CV_Wajahat_Hassan.pdf" target="_blank"
-          >Download CV (PDF)</a
-        >
-        <a
-          class="button"
-          href="https://github.com/wajjahathassan"
-          target="_blank"
-          >GitHub</a
-        >
-        <a
-          class="button"
-          href="https://wajahat2106hassan.pythonanywhere.com"
-          target="_blank"
-          >Live demo</a
-        >
-      </p>
+    <header class="hero-section">
+      <div class="hero-content">
+        <h1>Building Robust Systems with An Engineer's Mindset</h1>
+
+        <p class="hero-sub">
+          I am Wajahat Hassan. I apply the discipline of <strong>Electrical Engineering</strong> 
+            to <strong>Full-Stack Development</strong>, building Python and Flask applications 
+            that are as reliable as they are dynamic.
+        </p>
+
+        <a href="#projects" class="cta-button">View Architecture</a>
+      </div>
     </header>
 
-    <section>
-      <h2>Quick demo (30–60s)</h2>
-      <div style="display:flex; gap:16px; align-items:flex-start; flex-wrap: wrap;">
-        <video
-          width="360"
-          height="200"
-          controls
-          style="border-radius:6px; background:#000;"
-        >
-          <source src="demo.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+    <section id="projects" class="project-section">
+      <h2>Engineered Solutions</h2>
 
-        <div style="flex:1; min-width:240px;">
-          <p>This video shows a short walkthrough of my retrieval-augmented Q&A prototype - now refactored to use cloud embeddings (Google GenAI) with a lightweight NumPy similarity search for deployment, and a Flask front end that orchestrates retrieval → prompt → generation. The GitHub repo contains full source and updated run instructions.</p>
-          <p>If you'd like an alternate format or a longer walkthrough, I can share a hosted video link on request.</p>
-        </div>
+      <div class="project-grid">
+
+        <article class="project-card">
+          <div class="card-header">
+            <h3>The Shrine | RAG Architecture</h3>
+            <span class="version-badge">v2.0 Refactor</span>
+          </div>
+
+          <div class="card-body">
+            <p>
+              Instead of relying on a heavy database, I designed a lightweight, split-architecture system. 
+            When a user asks a question, the Flask server first pings the <strong>Google Cloud API</strong> 
+            to convert that text into vector data.
+            </p>
+
+            <p>
+              It then uses <strong>NumPy</strong> to perform a high-speed mathematical search against 
+            my local document store. Finally, it combines that retrieved context with a custom prompt 
+            to generate a unique, in-character response.
+            </p>
+          </div>
+
+          <div class="tech-stack">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Flask</span>
+            <span class="tech-tag">NumPy</span>
+            <span class="tech-tag">Google Gemini API</span>
+          </div>
+
+          <div class="card-footer">
+            <a href="https://github.com/wajjahathassan/The-Shrine" target="_blank" class="btn-secondary">View Source</a>
+            <a href="https://wajahat2106hassan.pythonanywhere.com/" target="_blank" class="btn-primary">Live Demo</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="card-header">
+            <h3>Smart Estimator | Data-Driven UX</h3>
+            <span class="version-badge">v1.0 Live</span>
+          </div>
+
+          <div class="card-body">
+            <p>
+              I engineered a full-stack solution that balances system performance with user utility. 
+                    On the backend, I architected a flat-file CMS using <strong>Flask</strong> and <strong>Pandas</strong>, 
+                    eliminating database latency for instant load times.
+            </p>
+            <p>
+              On the frontend, I developed a <strong>Smart Renovation Algorithm</strong> that validates user inputs 
+                    and performs real-time cost calculations. This project demonstrates my ability to optimize 
+                    server-side data structures while simultaneously implementing complex business logic in the browser.
+            </p>
+          </div>
+
+          <div class="tech-stack">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Flask</span>
+            <span class="tech-tag">Pandas</span>
+            <span class="tech-tag">JavaScript</span>
+          </div>
+
+          <div class="card-footer">
+            <a href="https://github.com/wajjahathassan/Portfolio-Gallery" target="_blank" class="btn-secondary">View Source</a>
+          </div>
+        </article>
+        
       </div>
     </section>
 
-    <section>
-      <h2>Selected projects</h2>
-      <div class="project">
-        <strong>The Shrine</strong> | Cloud-native RAG-enabled Flask app (cloud embeddings (Google GenAI), NumPy similarity search). Repo & demo:
-        <a href="https://github.com/wajjahathassan/The-Shrine"
-          >The Shrine</a
-        >.
+    <section id="timeline" class="timeline-section">
+      <h2>The Engineering Evolution</h2>
+
+      <div class="steps-container">
+
+        <div class="step-card">
+          <div class="step-icon">🎓</div>
+          <h3>The Foundation</h3>
+          <h4>Masters in Electrical Engineering</h4>
+          <p>
+            I spent a long time getting my Master's degree. It was difficult work. 
+                I had to learn how systems work and how to follow strict logic. 
+                Honestly, the most important thing I learned was discipline. 
+                I learned to test everything. I still use that same careful approach now when I write my code.
+          </p>
+        </div>
+
+        <div class="step-connector"></div>
+
+        <div class="step-card">
+          <div class="step-icon">🎨</div>
+          <h3>The Bridge</h3>
+          <h4>Co-Founder, SparkE Production</h4>
+          <p>
+            I helped start a small animation studio called SparkE Production. It wasn't just about making things look good. 
+                My job was to handle the technical side. I had to figure out how to make Unreal Engine do what we needed. 
+                It taught me how to solve hard problems and how to help a team finish projects on time.
+          </p>
+        </div>
+
+        <div class="step-connector"></div>
+
+        <div class="step-card">
+          <div class="step-icon">💻</div>
+          <h3>The Application</h3>
+          <h4>Full-Stack Developer</h4>
+          <p>
+            Now, I am fully focused on software. I built 'The Shrine' to prove I can make real applications. 
+                I use Python and Flask because they are reliable. Right now, I am working on RAG systems. 
+                I like figuring out how to connect AI with local data so that it runs fast.
+          </p>
+        </div>
+        
       </div>
-      <div class="project">
-        <strong>Portfolio Gallery</strong> | Flask + pandas driven gallery,
-        CSV-backed content and an estimator widget. Rep & demo:
-        <a href="https://github.com/wajjahathassan/Portfolio-Gallery">Portfolio Gallery</a>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <h2>Initialize Connection</h2>
+
+      <p>
+        I am currently optimizing systems and looking for new architectural challenges. 
+        If you have a complex problem that needs an engineering mindset, let's talk.
+      </p>
+
+      <div class="contact-actions">
+        <a href="mailto:wajahat.hassan.2106@gmail.com" class="btn-primary">Email</a>
+        <a href="CV_Wajahat_Hassan.pdf" target="_blank" class="btn-primary">Download CV (PDF)</a>
+
+        <a href="https://www.linkedin.com/in/wajahat-hassan-tech/" target="_blank" class="btn-secondary">LinkedIn</a>
+        <a href="https://github.com/wajjahathassan" target="_blank" class="btn-secondary">GitHub</a>
       </div>
     </section>
 
     <footer>
-      <p>
-        <strong>Contact:</strong> wajahat.hassan.2106@gmail.com · <strong>GitHub:</strong>
-        <a href="https://github.com/wajjahathassan"
-          >https://github.com/wajjahathassan</a
-        >
-      </p>
+      <p>System Online: 2026 | Engineered by Wajahat Hassan</p>
     </footer>
-
-    <script>
-      // show placeholder if demo.mp4 missing
-      window.addEventListener("DOMContentLoaded", function () {
-        var imgs = document.querySelectorAll("img");
-        var shown = false;
-        imgs.forEach(function (i) {
-          if (i.complete && i.naturalWidth > 0) shown = true;
-        });
-        if (!shown) {
-          document.getElementById("demobox").style.display = "flex";
-        }
-      });
-    </script>
   </body>
 </html>
